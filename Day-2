@@ -1,0 +1,30 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class solution{
+
+    /*
+     * Complete the 'solve' function below.
+     *
+     * The function accepts following parameters:
+     *  1. DOUBLE meal_cost
+     *  2. INTEGER tip_percent
+     *  3. INTEGER tax_percent
+     */
+     public static void main(String[] args){
+Scanner scanner=new Scanner(System.in);
+    double meal_cost=scanner.nextDouble();
+    int tip_percent=scanner.nextInt();
+    double tip=meal_cost*tip_percent/100;
+    int tax_percent=scanner.nextInt();
+    double tax=meal_cost*tax_percent/100;
+    int total_cost=(int)Math.round(meal_cost+tip+tax);
+    System.out.println(total_cost);
+    scanner.close();
+     }
+}
